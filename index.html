@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homestay @ Cheras</title>
+    <meta
+        name="description"
+        content="A comfortable Cheras homestay with spacious living areas, practical amenities, and a convenient city-fringe location."
+    >
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    >
+    <style>
+        :root {
+            --brand: #8a5a44;
+            --brand-dark: #5f3d2f;
+            --sand: #f6f0e8;
+            --ink: #1f1f1f;
+        }
+
+        body {
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(138, 90, 68, 0.14), transparent 32%),
+                linear-gradient(180deg, #fffdf9 0%, #f4ede5 100%);
+        }
+
+        .navbar {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 253, 249, 0.88);
+        }
+
+        .brand-mark {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--brand);
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .hero {
+            padding: 7rem 0 4rem;
+        }
+
+        .hero-card,
+        .feature-card,
+        .gallery-card,
+        .contact-card {
+            border: 0;
+            border-radius: 1.5rem;
+            box-shadow: 0 1.2rem 3rem rgba(47, 30, 20, 0.08);
+        }
+
+        .hero-image {
+            min-height: 420px;
+            border-radius: 1.75rem;
+            background:
+                linear-gradient(rgba(25, 20, 17, 0.2), rgba(25, 20, 17, 0.2)),
+                url("assets/images/living-room.jpeg") center/cover;
+            box-shadow: 0 1.2rem 3rem rgba(47, 30, 20, 0.14);
+        }
+
+        .eyebrow {
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brand);
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .btn-brand {
+            background: var(--brand);
+            border-color: var(--brand);
+        }
+
+        .btn-brand:hover,
+        .btn-brand:focus {
+            background: var(--brand-dark);
+            border-color: var(--brand-dark);
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(138, 90, 68, 0.14);
+            border-radius: 1rem;
+        }
+
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(138, 90, 68, 0.12);
+            color: var(--brand-dark);
+            font-size: 1.4rem;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .section-shell {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(138, 90, 68, 0.1);
+            border-radius: 2rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #fffaf4 0%, #f2e6da 100%);
+        }
+
+        footer {
+            color: #6a625d;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero {
+                padding-top: 6rem;
+            }
+
+            .hero-image {
+                min-height: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top border-bottom border-light-subtle">
+        <div class="container py-2">
+            <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="#top">
+                <span class="brand-mark">C</span>
+                <span>Homestay @ Cheras</span>
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="btn btn-brand text-white ms-lg-2" href="#contact">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-lg-6">
+                        <div class="hero-card bg-white p-4 p-lg-5">
+                            <p class="eyebrow mb-3">Comfortable city stay</p>
+                            <h1 class="display-5 fw-bold mb-3">Simple, spacious homestay in Cheras.</h1>
+                            <p class="lead text-secondary mb-4">
+                                A warm base for family trips, business stays, or weekend getaways, with practical amenities and cozy shared spaces.
+                            </p>
+                            <div class="d-flex flex-wrap gap-3 mb-4">
+                                <a class="btn btn-brand btn-lg text-white px-4" href="#gallery">View Photos</a>
+                                <a class="btn btn-outline-dark btn-lg px-4" href="#contact">Check Availability</a>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-4">
+                                    <div class="stat p-3 h-100">
+                                        <div class="fw-bold fs-4">8+</div>
+                                        <div class="text-secondary small">Guest-ready spaces</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="stat p-3 h-100">
+                                        <div class="fw-bold fs-4">Family</div>
+                                        <div class="text-secondary small">Friendly layout</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="stat p-3 h-100">
+                                        <div class="fw-bold fs-4">Self</div>
+                                        <div class="text-secondary small">Check-in ready</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="pb-5">
+            <div class="container">
+                <div class="section-shell p-4 p-lg-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5">
+                            <p class="eyebrow mb-3">Why stay here</p>
+                            <h2 class="h1 fw-bold mb-3">A relaxed home base close to daily essentials.</h2>
+                            <p class="text-secondary mb-0">
+                                Designed for convenience and comfort, the homestay gives guests a complete living setup with bedroom, kitchen, dining, and lounge areas all ready to use.
+                            </p>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="feature-card bg-white p-4 h-100">
+                                        <div class="feature-icon mb-3">1</div>
+                                        <h3 class="h5">Comfortable bedrooms</h3>
+                                        <p class="text-secondary mb-0">Restful rooms prepared for short or extended stays.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-card bg-white p-4 h-100">
+                                        <div class="feature-icon mb-3">2</div>
+                                        <h3 class="h5">Practical kitchen</h3>
+                                        <p class="text-secondary mb-0">A clean cooking space for simple meals and daily routines.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-card bg-white p-4 h-100">
+                                        <div class="feature-icon mb-3">3</div>
+                                        <h3 class="h5">Shared living area</h3>
+                                        <p class="text-secondary mb-0">A comfortable lounge to gather, relax, or enjoy entertainment.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-card bg-white p-4 h-100">
+                                        <div class="feature-icon mb-3">4</div>
+                                        <h3 class="h5">Laundry convenience</h3>
+                                        <p class="text-secondary mb-0">Washing facilities on-site for a smoother multi-day stay.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="amenities" class="pb-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <p class="eyebrow mb-3">Amenities</p>
+                        <h2 class="h1 fw-bold mb-3">Everything needed for a simple stay.</h2>
+                        <p class="text-secondary mb-0">
+                            The space is arranged around everyday comfort, with room to cook, rest, dine, freshen up, and unwind.
+                        </p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row row-cols-1 row-cols-md-2 g-3">
+                            <div class="col"><div class="feature-card bg-white p-4 h-100"><h3 class="h5">Living room with TV</h3><p class="text-secondary mb-0">A welcoming lounge for downtime after a day out in Cheras.</p></div></div>
+                            <div class="col"><div class="feature-card bg-white p-4 h-100"><h3 class="h5">Dining space</h3><p class="text-secondary mb-0">A neat area for meals, work sessions, or family conversations.</p></div></div>
+                            <div class="col"><div class="feature-card bg-white p-4 h-100"><h3 class="h5">Kitchen access</h3><p class="text-secondary mb-0">Suitable for preparing light meals and storing essentials.</p></div></div>
+                            <div class="col"><div class="feature-card bg-white p-4 h-100"><h3 class="h5">Bathroom and laundry</h3><p class="text-secondary mb-0">Functional facilities to keep longer stays comfortable.</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="pb-5">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+                    <div>
+                        <p class="eyebrow mb-2">Photo gallery</p>
+                        <h2 class="h1 fw-bold mb-0">A quick look around the home.</h2>
+                    </div>
+                    <p class="text-secondary mb-0">Real photos from the property, organized by key spaces.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/living-room.jpeg" alt="Living room">
+                            <div class="card-body"><h3 class="h5 mb-1">Living Room</h3><p class="text-secondary mb-0">Bright and comfortable shared lounge.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/living-room-tv.avif" alt="Living room with TV">
+                            <div class="card-body"><h3 class="h5 mb-1">TV Area</h3><p class="text-secondary mb-0">Entertainment corner for relaxing evenings.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/dining-room.jpg" alt="Dining room">
+                            <div class="card-body"><h3 class="h5 mb-1">Dining Space</h3><p class="text-secondary mb-0">Clean setup for meals and gatherings.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/dining-area.avif" alt="Dining area alternate view">
+                            <div class="card-body"><h3 class="h5 mb-1">Dining View</h3><p class="text-secondary mb-0">Additional angle of the shared meal area.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/kitchen.avif" alt="Kitchen">
+                            <div class="card-body"><h3 class="h5 mb-1">Kitchen</h3><p class="text-secondary mb-0">Practical cooking area for everyday use.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/kitchen-alt.jpeg" alt="Kitchen alternate view">
+                            <div class="card-body"><h3 class="h5 mb-1">Kitchen Detail</h3><p class="text-secondary mb-0">Extra view of the prep and storage space.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/bedroom.jpg" alt="Bedroom">
+                            <div class="card-body"><h3 class="h5 mb-1">Bedroom</h3><p class="text-secondary mb-0">Comfortable sleeping space for guests.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/bedroom-alt.jpg" alt="Bedroom alternate view">
+                            <div class="card-body"><h3 class="h5 mb-1">Bedroom View</h3><p class="text-secondary mb-0">A second angle showing room layout.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/bathroom.jpg" alt="Bathroom">
+                            <div class="card-body"><h3 class="h5 mb-1">Bathroom</h3><p class="text-secondary mb-0">Simple and functional washroom area.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/laundry-area.jpeg" alt="Laundry area">
+                            <div class="card-body"><h3 class="h5 mb-1">Laundry</h3><p class="text-secondary mb-0">Washing machine available for longer stays.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/lounge-tv.avif" alt="TV lounge area">
+                            <div class="card-body"><h3 class="h5 mb-1">Lounge Corner</h3><p class="text-secondary mb-0">An extra leisure area within the home.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="gallery-card card h-100 overflow-hidden">
+                            <img src="assets/images/exterior-view.jpeg" alt="Exterior view">
+                            <div class="card-body"><h3 class="h5 mb-1">Exterior View</h3><p class="text-secondary mb-0">A glance at the surrounding property frontage.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="pb-5">
+            <div class="container">
+                <div class="contact-card p-4 p-lg-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-7">
+                            <p class="eyebrow mb-3">Booking</p>
+                            <h2 class="h1 fw-bold mb-3">Ready to host your next stay in Cheras.</h2>
+                            <p class="text-secondary mb-0">
+                                Add your WhatsApp number, phone line, or booking platform link here to turn this page into a live inquiry landing page.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="bg-white rounded-4 p-4 shadow-sm h-100">
+                                <h3 class="h5 mb-3">Contact details</h3>
+                                <p class="mb-2"><strong>Location:</strong> Cheras, Kuala Lumpur</p>
+                                <p class="mb-2"><strong>Check-in:</strong> Flexible self check-in</p>
+                                <p class="mb-4"><strong>Inquiries:</strong> your-number-here</p>
+                                <a class="btn btn-brand text-white w-100" href="https://wa.me/60123456789">WhatsApp Inquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+            <p class="mb-0">Homestay @ Cheras</p>
+            <p class="mb-0">Simple Bootstrap landing page with locally organized property photos.</p>
+        </div>
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+    ></script>
+</body>
+</html>
